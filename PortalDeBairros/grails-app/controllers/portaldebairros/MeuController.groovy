@@ -2,5 +2,7 @@ package portaldebairros
 
 class MeuController {
 
-    def index() { }
+    def index() { 
+       render "Ola mundo"
+    }
 }
