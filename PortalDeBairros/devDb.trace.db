@@ -1,0 +1,6 @@
+10-10 08:57:50 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-10 08:57:50 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
