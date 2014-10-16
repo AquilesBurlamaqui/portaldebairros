@@ -11,6 +11,6 @@ class Imovel {
         endereco()    
     }
     String toString() {
-        return nome
+        return nome;
     }
 }

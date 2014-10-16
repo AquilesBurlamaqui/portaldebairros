@@ -26,6 +26,10 @@
 					
 						<g:sortableColumn property="nome" title="${message(code: 'bairro.nome.label', default: 'Nome')}" />
 					
+						<g:sortableColumn property="descricao" title="${message(code: 'bairro.descricao.label', default: 'Descricao')}" />
+					
+						<g:sortableColumn property="imagem" title="${message(code: 'bairro.imagem.label', default: 'Imagem')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -33,6 +37,11 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${bairroInstance.id}">${fieldValue(bean: bairroInstance, field: "nome")}</g:link></td>
+					
+						<td>${fieldValue(bean: bairroInstance, field: "descricao")}</td>
+					
+						<td><img src="${createLink(action:'imagem', id:bairroInstance?.id)}"/></td>
+                                                
 					
 					</tr>
 				</g:each>
