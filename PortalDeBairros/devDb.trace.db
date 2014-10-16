@@ -4,3 +4,27 @@ alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [421
 10-10 08:57:50 jdbc[12]: exception
 org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
 alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-16 09:54:36 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "IMAGEM BINARY(255) NOT NULL": "X'ffd8ffe000104a46494600010100000100010000ffdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e27... (34972)"; SQL statement:
+insert into bairro (id, version, descricao, imagem, nome) values (null, ?, ?, ?, ?) [22001-176]
+10-16 09:54:48 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "IMAGEM BINARY(255) NOT NULL": "X'ffd8ffe000104a46494600010100000100010000ffdb004300080606070605080707070909080a0c140d0c0b0b0c1912130f141d1a1f1e1d1a1c1c20242e27... (26131)"; SQL statement:
+insert into bairro (id, version, descricao, imagem, nome) values (null, ?, ?, ?, ?) [22001-176]
+10-16 11:43:08 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-16 11:43:08 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-16 11:47:36 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-16 11:47:36 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-16 11:48:16 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-16 11:48:16 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]

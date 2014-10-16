@@ -32,6 +32,22 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${bairroInstance?.descricao}">
+				<li class="fieldcontain">
+					<span id="descricao-label" class="property-label"><g:message code="bairro.descricao.label" default="Descricao" /></span>
+					
+						<span class="property-value" aria-labelledby="descricao-label"><g:fieldValue bean="${bairroInstance}" field="descricao"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${bairroInstance?.imagem}">
+				<li class="fieldcontain">
+					<span id="imagem-label" class="property-label"><g:message code="bairro.imagem.label" default="Imagem" /></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:bairroInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
