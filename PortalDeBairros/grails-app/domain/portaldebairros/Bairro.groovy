@@ -9,6 +9,7 @@ class Bairro {
         nome()
         descricao widget:'textArea'
         imagem maxSize: 2048*2048*2
+        //nova versao
     }
     
     String toString(){
