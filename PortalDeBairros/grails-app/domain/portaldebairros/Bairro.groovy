@@ -6,9 +6,9 @@ class Bairro {
     byte[] imagem
 
     static constraints = {
-        nome min: 2
+        //nome min: 2
         descricao widget:'textarea'
-        imagem 2048*2048*2
+        imagem maxSize: 1024*1024*15
     }
     
     String toString(){
