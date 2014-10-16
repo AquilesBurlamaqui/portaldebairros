@@ -1,14 +1,17 @@
 package portaldebairros
 
+import portaldebairros.util.Media
+
 class Bairro {
     String nome
     String descricao
-    byte[] imagem
+    Media imagem
+    
     
     static constraints = {
         nome()
         descricao widget:'textarea'
-        imagem maxSize: 1024*1024*15
+              
         
         //teste pedro
     }

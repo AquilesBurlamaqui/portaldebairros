@@ -14,14 +14,6 @@ class BairroController {
         params.max = Math.min(max ?: 10, 100)
         respond Bairro.list(params), model:[bairroInstanceCount: Bairro.count()]
     }
-    
-    def imagem() { 
-        def bairro = Bairro.get(params.id)        
-        response.contentType = "image/jpeg"
-        response.contentLength = bairro?.imagem.length
-        response.outputStream.write(bairro?.imagem)   
-    }
-
 
     def show(Bairro bairroInstance) {
         respond bairroInstance
