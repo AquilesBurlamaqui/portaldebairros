@@ -7,8 +7,10 @@ class Bairro {
     
     static constraints = {
         nome()
-        descricao widget:'textArea'
-        imagem maxSize: 2048*2048*2
+        descricao widget:'textarea'
+        imagem maxSize: 1024*1024*15
+        
+        //teste pedro
     }
     
     String toString(){
