@@ -5,9 +5,10 @@ import portaldebairros.util.Media
 class Orcamento {
     String nome
     int  custo
-    Media imagem
+    Media Arquivo
     
 
     static constraints = {
+        nome()
     }
 }
