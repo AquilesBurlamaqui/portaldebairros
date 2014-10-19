@@ -16,7 +16,7 @@
 		<g:message code="bairro.descricao.label" default="Descricao" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="descricao" required="" value="${bairroInstance?.descricao}"/>
+	<g:textArea name="descricao" cols="40" rows="5" required="" value="${bairroInstance?.descricao}"/>
 
 </div>
 
@@ -25,7 +25,7 @@
 		<g:message code="bairro.imagem.label" default="Imagem" />
 		<span class="required-indicator">*</span>
 	</label>
-	<input type="file" id="imagem" name="imagem" />
+	<g:select id="imagem" name="imagem.id" from="${portaldebairros.util.Media.list()}" optionKey="id" required="" value="${bairroInstance?.imagem?.id}" class="many-to-one"/>
 
 </div>
 
