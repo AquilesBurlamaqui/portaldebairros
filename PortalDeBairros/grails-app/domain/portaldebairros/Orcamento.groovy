@@ -1,9 +1,11 @@
 package portaldebairros
 
+import portaldebairros.util.Media
+
 class Orcamento {
     String nome
-    int  valor
-    int num
+    int  custo
+    Media imagem
     
 
     static constraints = {
