@@ -2,12 +2,14 @@ package portaldebairros.util
 
 class Media {
     
-    int tamanho
-    String nome
-    String formato
-    byte[] arquivo
+    int size    
+    String name 
+    String format
+    String fullPath
+    Date uploadDate = new Date()
+    byte[] file
     
     static constraints = {
-        arquivo maxSize: 1024*1204*5
+        file maxSize: 1024*1204*5
     }
 }

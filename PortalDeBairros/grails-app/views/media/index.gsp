@@ -24,35 +24,3 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="arquivo" title="${message(code: 'media.arquivo.label', default: 'Arquivo')}" />
-					
-						<g:sortableColumn property="formato" title="${message(code: 'media.formato.label', default: 'Formato')}" />
-					
-						<g:sortableColumn property="nome" title="${message(code: 'media.nome.label', default: 'Nome')}" />
-					
-						<g:sortableColumn property="tamanho" title="${message(code: 'media.tamanho.label', default: 'Tamanho')}" />
-					
-					</tr>
-				</thead>
-				<tbody>
-				<g:each in="${mediaInstanceList}" status="i" var="mediaInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${mediaInstance.id}">${fieldValue(bean: mediaInstance, field: "arquivo")}</g:link></td>
-					
-						<td>${fieldValue(bean: mediaInstance, field: "formato")}</td>
-					
-						<td>${fieldValue(bean: mediaInstance, field: "nome")}</td>
-					
-						<td>${fieldValue(bean: mediaInstance, field: "tamanho")}</td>
-					
-					</tr>
-				</g:each>
-				</tbody>
-			</table>
-			<div class="pagination">
-				<g:paginate total="${mediaInstanceCount ?: 0}" />
-			</div>
-		</div>
-	</body>
-</html>

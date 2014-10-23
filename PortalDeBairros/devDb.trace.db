@@ -1859,3 +1859,75 @@ alter table bairro add constraint FK_76k81x1wacj41q8apnatce5n8 foreign key (imag
 	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
 	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
 	at java.lang.Thread.run(Thread.java:724)
+10-23 17:13:02 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-23 17:13:02 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-23 17:13:02 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_gln39j9gds3jl8spsd9su2mdh if exists [42102-176]
+10-23 17:13:02 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_a1e12dww8aa96jkis130kbkr4 if exists [42102-176]
+10-23 17:13:02 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA" not found; SQL statement:
+alter table problema drop constraint FK_jvc0e3d2eik6ivk69cmg0xu99 if exists [42102-176]
+10-23 17:13:02 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
+alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]
+10-23 17:13:12 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-23 17:13:12 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-23 17:13:12 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_gln39j9gds3jl8spsd9su2mdh if exists [42102-176]
+10-23 17:13:12 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_a1e12dww8aa96jkis130kbkr4 if exists [42102-176]
+10-23 17:13:12 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA" not found; SQL statement:
+alter table problema drop constraint FK_jvc0e3d2eik6ivk69cmg0xu99 if exists [42102-176]
+10-23 17:13:12 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
+alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]
+10-23 17:13:26 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-23 17:13:26 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-23 17:13:26 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_gln39j9gds3jl8spsd9su2mdh if exists [42102-176]
+10-23 17:13:26 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_a1e12dww8aa96jkis130kbkr4 if exists [42102-176]
+10-23 17:13:26 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA" not found; SQL statement:
+alter table problema drop constraint FK_jvc0e3d2eik6ivk69cmg0xu99 if exists [42102-176]
+10-23 17:13:26 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
+alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]
+10-23 17:13:34 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-23 17:13:34 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-23 17:13:34 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_gln39j9gds3jl8spsd9su2mdh if exists [42102-176]
+10-23 17:13:34 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_a1e12dww8aa96jkis130kbkr4 if exists [42102-176]
+10-23 17:13:34 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA" not found; SQL statement:
+alter table problema drop constraint FK_jvc0e3d2eik6ivk69cmg0xu99 if exists [42102-176]
+10-23 17:13:34 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
+alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]
