@@ -140,6 +140,7 @@ grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'portaldebairro
 grails.plugin.springsecurity.authority.className = 'portaldebairros.Papel'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
+        '/**':                            ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/assets/**':                     ['permitAll'],
