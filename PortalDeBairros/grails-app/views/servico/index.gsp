@@ -26,7 +26,11 @@
 					
 						<g:sortableColumn property="nome" title="${message(code: 'servico.nome.label', default: 'Nome')}" />
 					
+						<th><g:message code="servico.usuario.label" default="Usuario" /></th>
+					
 						<g:sortableColumn property="descricao" title="${message(code: 'servico.descricao.label', default: 'Descricao')}" />
+					
+						<th><g:message code="servico.imagem.label" default="Imagem" /></th>
 					
 					</tr>
 				</thead>
@@ -36,7 +40,11 @@
 					
 						<td><g:link action="show" id="${servicoInstance.id}">${fieldValue(bean: servicoInstance, field: "nome")}</g:link></td>
 					
+						<td>${fieldValue(bean: servicoInstance, field: "usuario")}</td>
+					
 						<td>${fieldValue(bean: servicoInstance, field: "descricao")}</td>
+					
+						<td>${fieldValue(bean: servicoInstance, field: "imagem")}</td>
 					
 					</tr>
 				</g:each>

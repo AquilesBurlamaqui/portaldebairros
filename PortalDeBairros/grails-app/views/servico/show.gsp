@@ -32,11 +32,29 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${servicoInstance?.usuario}">
+				<li class="fieldcontain">
+					<span id="usuario-label" class="property-label"><g:message code="servico.usuario.label" default="Usuario" /></span>
+					
+						<span class="property-value" aria-labelledby="usuario-label"><g:link controller="usuario" action="show" id="${servicoInstance?.usuario?.id}">${servicoInstance?.usuario?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${servicoInstance?.descricao}">
 				<li class="fieldcontain">
 					<span id="descricao-label" class="property-label"><g:message code="servico.descricao.label" default="Descricao" /></span>
 					
 						<span class="property-value" aria-labelledby="descricao-label"><g:fieldValue bean="${servicoInstance}" field="descricao"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${servicoInstance?.imagem}">
+				<li class="fieldcontain">
+					<span id="imagem-label" class="property-label"><g:message code="servico.imagem.label" default="Imagem" /></span>
+					
+						<span class="property-value" aria-labelledby="imagem-label"><g:link controller="media" action="show" id="${servicoInstance?.imagem?.id}">${servicoInstance?.imagem?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
