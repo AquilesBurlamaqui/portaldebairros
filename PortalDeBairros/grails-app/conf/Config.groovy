@@ -138,6 +138,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'portaldebairros.Usuario'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'portaldebairros.UsuarioPapel'
 grails.plugin.springsecurity.authority.className = 'portaldebairros.Papel'
+grails.plugin.springsecurity.securityConfigType = "Annotation"
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
         '/**':                            ['IS_AUTHENTICATED_ANONYMOUSLY'],
