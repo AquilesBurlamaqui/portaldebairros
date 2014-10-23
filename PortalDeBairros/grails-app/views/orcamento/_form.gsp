@@ -20,12 +20,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: orcamentoInstance, field: 'arquivo', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: orcamentoInstance, field: 'arquivo', 'error')} ">
 	<label for="arquivo">
 		<g:message code="orcamento.arquivo.label" default="Arquivo" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="arquivo" name="arquivo.id" from="${portaldebairros.util.Media.list()}" optionKey="id" required="" value="${orcamentoInstance?.arquivo?.id}" class="many-to-one"/>
+	<g:select id="arquivo" name="arquivo.id" from="${portaldebairros.util.Media.list()}" optionKey="id" value="${orcamentoInstance?.arquivo?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 

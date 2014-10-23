@@ -12,7 +12,7 @@ class Orcamento {
     static constraints = {
         nome()
         custo()
-        arquivo()
+        arquivo(blank: true, nullable: true)
         
     }
     String toString(){
