@@ -11,9 +11,9 @@ class Empresa {
     static constraints = {
         nome()
         endereco()
-        CNPJ()
+        CNPJ(size:18)
         descricao widget: 'textarea'
         contato()
-        email()
+        email(email:true)
     }
 }
