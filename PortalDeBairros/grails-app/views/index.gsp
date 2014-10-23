@@ -41,7 +41,7 @@
 			}
 
 			#page-body {
-				margin: 2em 1em 1.25em 18em;
+				margin: 10px 10px 10px 50px;
 			}
 
 			h2 {
@@ -92,7 +92,7 @@
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 					</g:each>-->
                                         
-                                        <g:link controller="empresa" action="index">Listar empresas</g:link></br>
+                                        <g:link controller="empresa" action="index"><asset:image src="agencia.png" alt="Empresas" width="100" height="100"/></g:link></br>
                                         <g:link controller="servico" action="index">Listar servicos</g:link></br>
                                         <g:link controller="usuario" action="index">Listar usuario</g:link></br>
                                       
