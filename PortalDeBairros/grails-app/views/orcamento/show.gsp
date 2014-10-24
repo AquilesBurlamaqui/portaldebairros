@@ -41,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${orcamentoInstance?.arquivo}">
+				<g:if test="${orcamentoInstance?.file}">
 				<li class="fieldcontain">
-					<span id="arquivo-label" class="property-label"><g:message code="orcamento.arquivo.label" default="Arquivo" /></span>
+					<span id="file-label" class="property-label"><g:message code="orcamento.file.label" default="File" /></span>
 					
-						<span class="property-value" aria-labelledby="arquivo-label"><g:link controller="media" action="show" id="${orcamentoInstance?.arquivo?.id}">${orcamentoInstance?.arquivo?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="file-label"><g:link controller="media" action="show" id="${orcamentoInstance?.file?.id}">${orcamentoInstance?.file?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

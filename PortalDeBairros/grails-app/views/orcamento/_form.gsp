@@ -1,7 +1,5 @@
 <%@ page import="portaldebairros.Orcamento" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: orcamentoInstance, field: 'nome', 'error')} required">
 	<label for="nome">
 		<g:message code="orcamento.nome.label" default="Nome" />
@@ -20,13 +18,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: orcamentoInstance, field: 'arquivo', 'error')} ">
-	<label for="arquivo">
-		<g:message code="orcamento.arquivo.label" default="Arquivo" />
+<div class="fieldcontain ${hasErrors(bean: orcamentoInstance, field: 'file', 'error')} ">
+	<label for="file">
+		<g:message code="orcamento.file.label" default="File" />
 		
 	</label>
-	<g:select id="arquivo" name="arquivo.id" from="${portaldebairros.util.Media.list()}" optionKey="id" value="${orcamentoInstance?.arquivo?.id}" class="many-to-one" noSelection="['null': '']"/>
-
+        <g:select id="file" name="file.id" from="${portaldebairros.util.Media.list()}" optionKey="id" value="${orcamentoInstance?.file?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: orcamentoInstance, field: 'solucao', 'error')} required">

@@ -25,7 +25,11 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form url="[resource:orcamentoInstance, action:'save']" >
+                        <fieldset class="form">
+                        <g:message message="Envie o arquivo e depois o selecione em baixo no campo File" /> <br/><br/>
+                        <g:uploadForm name="arquivo" action="upload"> <input name="arquivo" type="file"/> <input type='submit' /></g:uploadForm> <br/>
+			</fieldset>
+                        <g:form url="[resource:orcamentoInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>
@@ -33,6 +37,7 @@
 					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form>
+                        
 		</div>
 	</body>
 </html>

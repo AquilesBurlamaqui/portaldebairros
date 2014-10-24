@@ -24,3 +24,27 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="name" title="${message(code: 'media.name.label', default: 'Name')}" />
+					
+						<g:sortableColumn property="file" title="${message(code: 'media.file.label', default: 'File')}" />
+					
+					</tr>
+				</thead>
+				<tbody>
+				<g:each in="${mediaInstanceList}" status="i" var="mediaInstance">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${mediaInstance.id}">${fieldValue(bean: mediaInstance, field: "name")}</g:link></td>
+					
+						<td>${fieldValue(bean: mediaInstance, field: "file")}</td>
+					
+					</tr>
+				</g:each>
+				</tbody>
+			</table>
+			<div class="pagination">
+				<g:paginate total="${mediaInstanceCount ?: 0}" />
+			</div>
+		</div>
+	</body>
+</html>

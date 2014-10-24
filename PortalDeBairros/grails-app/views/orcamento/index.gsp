@@ -28,7 +28,7 @@
 					
 						<g:sortableColumn property="custo" title="${message(code: 'orcamento.custo.label', default: 'Custo')}" />
 					
-						<th><g:message code="orcamento.arquivo.label" default="Arquivo" /></th>
+						<th><g:message code="orcamento.file.label" default="File" /></th>
 					
 						<th><g:message code="orcamento.solucao.label" default="Solucao" /></th>
 					
@@ -42,7 +42,7 @@
 					
 						<td>${fieldValue(bean: orcamentoInstance, field: "custo")}</td>
 					
-						<td>${fieldValue(bean: orcamentoInstance, field: "arquivo")}</td>
+						<td>${fieldValue(bean: orcamentoInstance, field: "file")}</td>
 					
 						<td>${fieldValue(bean: orcamentoInstance, field: "solucao")}</td>
 					
