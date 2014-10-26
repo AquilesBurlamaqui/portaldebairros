@@ -25,6 +25,10 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
+                        
+                         <center><br/><g:uploadForm name="arquivo" action="upload"> <input name="arquivo" type="file"/> <input type='submit' /></g:uploadForm>
+                         <g:message message="Envie o arquivo e depois o selecione em baixo no campo File" /> <br/></center>
+                        
 			<g:form url="[resource:problemaInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>

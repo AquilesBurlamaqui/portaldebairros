@@ -1,14 +1,12 @@
 <%@ page import="portaldebairros.Problema" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'nome', 'error')} required">
 	<label for="nome">
 		<g:message code="problema.nome.label" default="Nome" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="nome" required="" value="${problemaInstance?.nome}"/>
-
+     
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'descricao', 'error')} required">

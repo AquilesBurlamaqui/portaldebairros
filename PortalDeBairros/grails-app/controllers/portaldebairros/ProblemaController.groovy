@@ -4,10 +4,12 @@ package portaldebairros
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import portaldebairros.Solucao
+import portaldebairros.util.Media
 
 @Transactional(readOnly = true)
 class ProblemaController {
-
+    def MediaInstance = new Media()
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -22,6 +24,17 @@ class ProblemaController {
     def create() {
         respond new Problema(params)
     }
+     def createSolucao() {
+        redirect(controller: "Solucao", action: "create")
+    }
+    
+      def upload(){
+        def files = request.getFile('arquivo')
+        MediaInstance.name = files.originalFilename
+        MediaInstance.file = files.getBytes()
+        MediaInstance.save()
+        redirect(uri: "/Problema/create")
+     }
 
     @Transactional
     def save(Problema problemaInstance) {

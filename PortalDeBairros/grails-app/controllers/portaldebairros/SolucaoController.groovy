@@ -22,6 +22,9 @@ class SolucaoController {
     def create() {
         respond new Solucao(params)
     }
+    def createOrcamento() {
+        redirect(controller: "Orcamento", action: "create")
+    }
 
     @Transactional
     def save(Solucao solucaoInstance) {

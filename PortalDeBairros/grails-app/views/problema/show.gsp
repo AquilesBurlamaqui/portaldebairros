@@ -1,10 +1,12 @@
 
 <%@ page import="portaldebairros.Problema" %>
+<%@ page import="portaldebairros.Solucao" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'problema.label', default: 'Problema')}" />
+                <g:set var="entityName1" value="${message(code: 'solucao.label', default: 'Solucao')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -14,6 +16,8 @@
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                                <li><g:link class="create" action="createSolucao"><g:message code="default.new.label" args="[entityName1]" /></g:link></li>
+                                
 			</ul>
 		</div>
 		<div id="show-problema" class="content scaffold-show" role="main">
@@ -78,6 +82,7 @@
 					
 				</li>
 				</g:if>
+                                
 			
 			</ol>
 			<g:form url="[resource:problemaInstance, action:'delete']" method="DELETE">
