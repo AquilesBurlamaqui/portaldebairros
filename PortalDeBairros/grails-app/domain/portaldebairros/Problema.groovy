@@ -7,15 +7,15 @@ class Problema {
     String descricao
     Float latitude
     Float longitude
-    Media imagem
-    static hasMany = [solucoes: Solucao]
+    static hasMany = [solucoes: Solucao,media: Media]
+    
     
     static constraints = {
         nome()
         descricao()
         latitude()
         longitude()
-        imagem(blank:true, nullable:true)
+        media()
     }
     String toString(){
      return nome

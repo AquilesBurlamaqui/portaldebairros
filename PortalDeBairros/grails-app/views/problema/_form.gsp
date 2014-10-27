@@ -1,12 +1,14 @@
 <%@ page import="portaldebairros.Problema" %>
 
+
+
 <div class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'nome', 'error')} required">
 	<label for="nome">
 		<g:message code="problema.nome.label" default="Nome" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="nome" required="" value="${problemaInstance?.nome}"/>
-     
+
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'descricao', 'error')} required">
@@ -36,12 +38,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'imagem', 'error')} ">
-	<label for="imagem">
-		<g:message code="problema.imagem.label" default="Imagem" />
+<div class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'media', 'error')} ">
+	<label for="media">
+		<g:message code="problema.media.label" default="Media" />
 		
 	</label>
-	<g:select id="imagem" name="imagem.id" from="${portaldebairros.util.Media.list()}" optionKey="id" value="${problemaInstance?.imagem?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select name="media" from="${portaldebairros.util.Media.list()}" multiple="multiple" optionKey="id" size="5" value="${problemaInstance?.media*.id}" class="many-to-many"/>
 
 </div>
 

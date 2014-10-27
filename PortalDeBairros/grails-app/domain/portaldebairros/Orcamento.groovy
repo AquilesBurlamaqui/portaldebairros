@@ -5,15 +5,14 @@ import portaldebairros.util.Media
 class Orcamento {
     String nome
     int  custo
-    Media file
     
     static belongsTo = [solucao: Solucao] 
+    static hasMany = [media: Media]
     
     static constraints = {
         nome()
         custo()
-        file(blank:true, nullable: true)
-        
+        media()
     }
     String toString(){
      return nome

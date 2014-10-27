@@ -41,11 +41,13 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${orcamentoInstance?.file}">
+				<g:if test="${orcamentoInstance?.media}">
 				<li class="fieldcontain">
-					<span id="file-label" class="property-label"><g:message code="orcamento.file.label" default="File" /></span>
+					<span id="media-label" class="property-label"><g:message code="orcamento.media.label" default="Media" /></span>
 					
-						<span class="property-value" aria-labelledby="file-label"><g:link controller="media" action="show" id="${orcamentoInstance?.file?.id}">${orcamentoInstance?.file?.encodeAsHTML()}</g:link></span>
+						<g:each in="${orcamentoInstance.media}" var="m">
+						<span class="property-value" aria-labelledby="media-label"><g:link controller="media" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

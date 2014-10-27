@@ -1,14 +1,14 @@
 package portaldebairros
+import portaldebairros.util.Media
 
 
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-import portaldebairros.util.Media
 
 @Transactional(readOnly = true)
 class OrcamentoController {
-    def MediaInstance = new Media()
+
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -23,19 +23,19 @@ class OrcamentoController {
     def create() {
         respond new Orcamento(params)
     }
- 
-     def upload(){
+    
+    def upload(){
+        def MediaInstance = new Media()
         def files = request.getFile('arquivo')
         MediaInstance.name = files.originalFilename
         MediaInstance.file = files.getBytes()
         MediaInstance.save()
-        redirect(uri: "/Orcamento/create")
+        MediaInstance.delete()
+        redirect(uri: "/Problema/create")
      }
 
-    
     @Transactional
     def save(Orcamento orcamentoInstance) {
-        
         if (orcamentoInstance == null) {
             notFound()
             return

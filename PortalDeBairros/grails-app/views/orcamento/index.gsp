@@ -28,8 +28,6 @@
 					
 						<g:sortableColumn property="custo" title="${message(code: 'orcamento.custo.label', default: 'Custo')}" />
 					
-						<th><g:message code="orcamento.file.label" default="File" /></th>
-					
 						<th><g:message code="orcamento.solucao.label" default="Solucao" /></th>
 					
 					</tr>
@@ -41,8 +39,6 @@
 						<td><g:link action="show" id="${orcamentoInstance.id}">${fieldValue(bean: orcamentoInstance, field: "nome")}</g:link></td>
 					
 						<td>${fieldValue(bean: orcamentoInstance, field: "custo")}</td>
-					
-						<td>${fieldValue(bean: orcamentoInstance, field: "file")}</td>
 					
 						<td>${fieldValue(bean: orcamentoInstance, field: "solucao")}</td>
 					

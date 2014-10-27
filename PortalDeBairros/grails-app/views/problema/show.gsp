@@ -16,8 +16,7 @@
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-                                <li><g:link class="create" action="createSolucao"><g:message code="default.new.label" args="[entityName1]" /></g:link></li>
-                                
+                                <li><g:link class="create" action="createSolucao"><g:message code="Solucao.new.label" args="[entityName1]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="show-problema" class="content scaffold-show" role="main">
@@ -63,11 +62,13 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${problemaInstance?.imagem}">
+				<g:if test="${problemaInstance?.media}">
 				<li class="fieldcontain">
-					<span id="imagem-label" class="property-label"><g:message code="problema.imagem.label" default="Imagem" /></span>
+					<span id="media-label" class="property-label"><g:message code="problema.media.label" default="Media" /></span>
 					
-						<span class="property-value" aria-labelledby="imagem-label"><g:link controller="media" action="show" id="${problemaInstance?.imagem?.id}">${problemaInstance?.imagem?.encodeAsHTML()}</g:link></span>
+						<g:each in="${problemaInstance.media}" var="m">
+						<span class="property-value" aria-labelledby="media-label"><g:link controller="media" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
@@ -82,7 +83,6 @@
 					
 				</li>
 				</g:if>
-                                
 			
 			</ol>
 			<g:form url="[resource:problemaInstance, action:'delete']" method="DELETE">
