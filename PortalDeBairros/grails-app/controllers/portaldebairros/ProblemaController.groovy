@@ -23,6 +23,8 @@ class ProblemaController {
         respond new Problema(params)
     }
     
+    
+    
      def upload(){
         def MediaInstance = new Media()
         def files = request.getFile('arquivo')
@@ -30,7 +32,6 @@ class ProblemaController {
         MediaInstance.file = files.getBytes()
         MediaInstance.save()
         MediaInstance.delete()
-        redirect(uri: "/Problema/create")
      }
      
     def createSolucao() {

@@ -5,8 +5,9 @@ import portaldebairros.util.Media
 class Problema {
     String nome
     String descricao
-    Float latitude
-    Float longitude
+    String address
+    BigDecimal latitude
+    BigDecimal longitude
     static hasMany = [solucoes: Solucao,media: Media]
     
     
@@ -16,6 +17,7 @@ class Problema {
         latitude()
         longitude()
         media()
+        address()
     }
     String toString(){
      return nome

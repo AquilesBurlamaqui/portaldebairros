@@ -3420,3 +3420,93 @@ alter table orcamento_media drop constraint FK_xhxnlpukejdhddyjpnmu4veh if exist
 10-27 16:44:40 jdbc[12]: exception
 org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO_MEDIA" not found; SQL statement:
 alter table orcamento_media drop constraint FK_97e0xig3usbg8k6shr62s9yc4 if exists [42102-176]
+10-29 13:49:28 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "BPROBLEMA_CATALOG_MEDIA" not found; SQL statement:
+alter table bproblema_catalog_media drop constraint FK_n1q8taa680w6p3jeyqtl4g5bp if exists [42102-176]
+10-29 13:49:28 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "BPROBLEMA_CATALOG_MEDIA" not found; SQL statement:
+alter table bproblema_catalog_media drop constraint FK_6wqx1ideq6tek60qorwt6sl4v if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "BAIRRO" not found; SQL statement:
+alter table bairro drop constraint FK_76k81x1wacj41q8apnatce5n8 if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "NOTICIA" not found; SQL statement:
+alter table noticia drop constraint FK_lo4x73uxfrwicrprv4u1e42u7 if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_a1e12dww8aa96jkis130kbkr4 if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO_MEDIA" not found; SQL statement:
+alter table orcamento_media drop constraint FK_xhxnlpukejdhddyjpnmu4veh if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO_MEDIA" not found; SQL statement:
+alter table orcamento_media drop constraint FK_97e0xig3usbg8k6shr62s9yc4 if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA_CATALOG_MEDIA" not found; SQL statement:
+alter table problema_catalog_media drop constraint FK_9duptdipn95dhpmx1syuo9exo if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA_CATALOG_MEDIA" not found; SQL statement:
+alter table problema_catalog_media drop constraint FK_qu1a64yrshkfbcmi3f67jr2ae if exists [42102-176]
+10-29 13:49:44 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
+alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "BAIRRO" not found; SQL statement:
+alter table bairro drop constraint FK_76k81x1wacj41q8apnatce5n8 if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "NOTICIA" not found; SQL statement:
+alter table noticia drop constraint FK_lo4x73uxfrwicrprv4u1e42u7 if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_a1e12dww8aa96jkis130kbkr4 if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO_MEDIA" not found; SQL statement:
+alter table orcamento_media drop constraint FK_xhxnlpukejdhddyjpnmu4veh if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO_MEDIA" not found; SQL statement:
+alter table orcamento_media drop constraint FK_97e0xig3usbg8k6shr62s9yc4 if exists [42102-176]
+10-29 13:50:00 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
+alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "BAIRRO" not found; SQL statement:
+alter table bairro drop constraint FK_76k81x1wacj41q8apnatce5n8 if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENDERECO" not found; SQL statement:
+alter table endereco drop constraint FK_o1jky3mlwinyvmuce9bxm7ovi if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "IMOVEL" not found; SQL statement:
+alter table imovel drop constraint FK_5gh1uex58qkul5vkbwb7v0gpq if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "NOTICIA" not found; SQL statement:
+alter table noticia drop constraint FK_lo4x73uxfrwicrprv4u1e42u7 if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO" not found; SQL statement:
+alter table orcamento drop constraint FK_a1e12dww8aa96jkis130kbkr4 if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO_MEDIA" not found; SQL statement:
+alter table orcamento_media drop constraint FK_xhxnlpukejdhddyjpnmu4veh if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "ORCAMENTO_MEDIA" not found; SQL statement:
+alter table orcamento_media drop constraint FK_97e0xig3usbg8k6shr62s9yc4 if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA_MEDIA" not found; SQL statement:
+alter table problema_media drop constraint FK_4qmkyllalem5rmjh4awa60kaf if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "PROBLEMA_MEDIA" not found; SQL statement:
+alter table problema_media drop constraint FK_ojl5kovimqabrajd8ool2b7ow if exists [42102-176]
+10-29 13:54:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
+alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]

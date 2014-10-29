@@ -31,7 +31,8 @@
 						<g:sortableColumn property="latitude" title="${message(code: 'problema.latitude.label', default: 'Latitude')}" />
 					
 						<g:sortableColumn property="longitude" title="${message(code: 'problema.longitude.label', default: 'Longitude')}" />
-					
+					        
+                                                <g:sortableColumn property="address" title="${message(code: 'problema.address.label', default: 'Address')}" />
 					</tr>
 				</thead>
 				<tbody>
@@ -45,6 +46,8 @@
 						<td>${fieldValue(bean: problemaInstance, field: "latitude")}</td>
 					
 						<td>${fieldValue(bean: problemaInstance, field: "longitude")}</td>
+                                                
+                                                <td>${fieldValue(bean: problemaInstance, field: "address")}</td>
 					
 					</tr>
 				</g:each>

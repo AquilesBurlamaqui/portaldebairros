@@ -83,6 +83,16 @@
 					
 				</li>
 				</g:if>
+                                
+                              <g:if test="${problemaInstance?.address}">
+				<li class="fieldcontain">
+					<span id="address-label" class="property-label"><g:message code="problema.address.label" default="Address" /></span>
+					
+						<span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${problemaInstance}" field="address"/></span>
+					
+				</li>
+				</g:if>
+                                
 			
 			</ol>
 			<g:form url="[resource:problemaInstance, action:'delete']" method="DELETE">
