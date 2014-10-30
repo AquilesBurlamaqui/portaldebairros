@@ -9,7 +9,7 @@ class Noticia {
     
     static hasmany = [imagem: Media]
       
-
+    //modificado
     static constraints = {
         titulo()
         descricao widget:"textarea" 
