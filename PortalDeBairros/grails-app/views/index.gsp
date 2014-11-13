@@ -4,6 +4,10 @@
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
 		<style type="text/css" media="screen">
+                    
+                        #log{
+                        background-color: LightGray;
+                        }
 			#status {
 				background-color: #eee;
 				border: .2em solid #fff;
@@ -82,6 +86,26 @@
 	</head>
 	<body>
 		
+  <!--formulario de usuario e senha-->  
+<sec:ifNotLoggedIn>
+  <div id="log">
+  <form method="POST" action="${resource(file: 'j_spring_security_check')}">
+  <table>
+      <td>Username:</td><td><g:textField name="j_username"/></td>
+      <td>Password:</td><td><input name="j_password" type="password"/></td>
+      <td colspan="2"><g:submitButton name="login" value="Login"/></td>
+  </table>
+</form>
+</div>
+</sec:ifNotLoggedIn>
+
+<sec:ifLoggedIn>
+    <div id="log">
+    <td>Usuário autenticado com sucesso!!</td>
+    <td><g:link controller="logout">Logout</g:link></td>
+    </div>
+</sec:ifLoggedIn>
+
 		<div id="page-body" role="main">
 			
 
@@ -90,11 +114,11 @@
 				<ul>
 					<!--<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>-->
-                                        
+			</g:each>-->
+                                        <g:link controller="usuario" action="create">Cadastrar Usuario</g:link></br>
                                         <g:link controller="empresa" action="index"><asset:image src="agencia.png" alt="Empresas" width="100" height="100"/></g:link></br>
-                                        <g:link controller="servico" action="index">Listar servicos</g:link></br>
-                                        <g:link controller="usuario" action="index">Listar usuario</g:link></br>
+                                        <g:link controller="servico" action="index">Listar Servicos</g:link></br>
+                                        <g:link controller="usuario" action="index">Listar Usuario</g:link></br>
                                       
 				</ul>
 			</div>
