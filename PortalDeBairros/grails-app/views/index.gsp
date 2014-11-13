@@ -87,24 +87,7 @@
 	<body>
 		
   <!--formulario de usuario e senha-->  
-<sec:ifNotLoggedIn>
-  <div id="log">
-  <form method="POST" action="${resource(file: 'j_spring_security_check')}">
-  <table>
-      <td>Username:</td><td><g:textField name="j_username"/></td>
-      <td>Password:</td><td><input name="j_password" type="password"/></td>
-      <td colspan="2"><g:submitButton name="login" value="Login"/></td>
-  </table>
-</form>
-</div>
-</sec:ifNotLoggedIn>
 
-<sec:ifLoggedIn>
-    <div id="log">
-    <td>Usuário autenticado com sucesso!!</td>
-    <td><g:link controller="logout">Logout</g:link></td>
-    </div>
-</sec:ifLoggedIn>
 
 		<div id="page-body" role="main">
 			
