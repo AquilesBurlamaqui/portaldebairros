@@ -141,6 +141,7 @@ grails.plugin.springsecurity.authority.className = 'portaldebairros.Papel'
 grails.plugin.springsecurity.securityConfigType = "Annotation"
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
+        '/inicial/**':                    ['ROLE_USER'],
         '/**':                            ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],

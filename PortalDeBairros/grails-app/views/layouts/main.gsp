@@ -17,6 +17,7 @@
 		<g:layoutHead/>
 	</head>
 	<body>
+            <g:link controller="inicial" action="index"><asset:image src="botao.jpg" alt="Login" widht="25px" height="25px" align="right"/></g:link>
 		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="nossobairro.gif" alt="Grails"/></a></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
