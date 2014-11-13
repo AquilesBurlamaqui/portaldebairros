@@ -47,8 +47,8 @@
 
 <div class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'address', 'error')} ">
 	<label for="address">
-		<g:message code="problema.address.label" default="address" />
-		
+		<g:message code="problema.address.label" default="Address" />
+		<span class="required-indicator">*</span>
 	</label>
 	<g:field id="add" name="address" value="${fieldValue(bean: problemaInstance, field: 'address')}" required=""/>
 

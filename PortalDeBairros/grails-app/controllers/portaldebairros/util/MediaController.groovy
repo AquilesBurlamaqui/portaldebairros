@@ -22,6 +22,20 @@ class MediaController {
     def create() {
         respond new Media(params)
     }
+    
+    def download(){
+        def media = Media.get(params.id)
+        response.setContentType("application/octet-stream")
+        response.setHeader("Content-disposition", "attachment; filename= ${media.getName()}")
+        response.outputStream << media.file
+        response.outputStream.flush()
+    }
+    
+     def viewImage = {
+      def imagem = Media.get( params.id )
+      byte[] image = imagem.file 
+      response.outputStream << image
+    } 
 
     @Transactional
     def save(Media mediaInstance) {

@@ -46,7 +46,7 @@
 					<span id="media-label" class="property-label"><g:message code="orcamento.media.label" default="Media" /></span>
 					
 						<g:each in="${orcamentoInstance.media}" var="m">
-						<span class="property-value" aria-labelledby="media-label"><g:link controller="media" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="media-label"><g:link controller="media" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link>&nbsp;&nbsp;<g:link controller="media" action="download" id="${m.id}"><g:img dir="images" file="downIco.png" width="15" height="15" title="download"/></g:link></span>
 						</g:each>
 					
 				</li>

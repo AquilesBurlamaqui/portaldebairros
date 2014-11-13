@@ -3510,3 +3510,4 @@ alter table problema_media drop constraint FK_ojl5kovimqabrajd8ool2b7ow if exist
 10-29 13:54:22 jdbc[11]: exception
 org.h2.jdbc.JdbcSQLException: Table "SOLUCAO" not found; SQL statement:
 alter table solucao drop constraint FK_ru9nwltnbarx86lim6a9gp985 if exists [42102-176]
+10-29 21:35:13 pageStore: Transaction log could not be truncated; size: 19 MB

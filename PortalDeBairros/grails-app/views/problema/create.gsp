@@ -2,15 +2,12 @@
 <html>
 	<head>
                 <meta name="layout" content="main">
-                <meta charset="utf-8">
 		<g:set var="entityName" value="${message(code: 'problema.label', default: 'Problema')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
                 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-                <g:javascript src="app.js" />
-                <g:javascript src="Google.js" />
-                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+                <g:javascript src="map.js" />
                 <g:javascript src="jquery-1.2.2.pack.js" />
-                    <style>
+                <style>
                             #map-canvas {
                               height:300px;
                               wight:100%;
@@ -26,21 +23,33 @@
                               padding: 5px;
                               border: 1px solid #999;
                           }
-                    </style>
+                 </style>
                     <script type="text/javascript" language="javascript">
-                         
-                    $(document).ready(function() { /// Wait till page is loaded
-                    $('#enviar').click(function(){
-                    var nomeFile = $("#arquivo").val().split('\\').pop();;
-                    console.log(nomeFile);
-                    $('#upload').submit();
-                    $("#arquivo").val("");
-                    alert("O arquivo " + nomeFile + " foi adicionado.");
-                    $('#mediaList').load("create.gsp #mediaList");
-                   
-                    });
-                    }); //// End of Wait till page is loaded
+                       
                     
+                    $(document).ready(function() { /// Wait till page is loaded
+                        $('#enviar').click(function(){
+                            var nomeFile = $("#arquivo").val().split('\\').pop();
+                            var format = $("#arquivo").val().split('.').pop();
+                            var sizeB = $("#arquivo")[0].files[0].size;
+                            var sizeM = (sizeB / (1024*1024)).toFixed(2); 
+                         if(((format == 'jpg') || (format == 'JPG') || (format == 'png') || (format == 'gif')) && (sizeM < 3)){
+                                $('#upload').submit();
+                                $("#arquivo").val("");
+                                alert("O arquivo " + nomeFile + " está sendo adicionado.");
+                         }
+                         else{
+                                alert("Envie arquivos de imagem nos formatos: .jpg, .png, .gif e com menos de 3mb");
+                                $("#arquivo").val("");
+                         }
+                        });
+                    }); //// End of Wait till page is loaded
+                    function setFrameLoaded(){
+                        $('#mediaList').load("create.gsp #mediaList");
+                    }
+                    
+                    
+          
                     </script>
 	</head>
 	<body>
@@ -71,12 +80,12 @@
                           <div id="map-canvas"> </div>
                         
                       <center><br/>
-                              <g:uploadForm id="upload" name="upload" action="upload" target="hidden-upload-frame"> 
-                              <input id="arquivo" name="arquivo" type="file"/> <input id="enviar" name="enviar" type='button' value="enviar"/>
+                              <g:uploadForm id="upload" name="upload" action="upload" target="iframe"> 
+                              <input id="arquivo" name="arquivo" type="file" accept="image/*"/> <input id="enviar" name="enviar" type='button' value="enviar"/>
                               </g:uploadForm>
-                              <iframe id="hidden-upload-frame" name="hidden-upload-frame" style="display: none;"></iframe>
+                              <iframe id="iframe" onload='setFrameLoaded();' name="iframe" style="display: none;"></iframe>
                               
-                         <g:message message="Envie o arquivo e depois o selecione em baixo no campo File" /> <br/></center>
+                         <g:message message="Envie uma imagem e depois o selecione em baixo no campo File" /> <br/></center>
                          <div id="show" align="center"></div>
 			<g:form url="[resource:problemaInstance, action:'save']" >
 				<fieldset class="form">

@@ -5,7 +5,20 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'problema.label', default: 'Problema')}" />
+                <g:set var="entityName1" value="${message(code: 'solucao.label', default: 'Solucao')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+                <g:javascript src="jquery-1.2.2.pack.js" />
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <script>
+                  $.ajax({
+                        url: "/problemaController/createJson",
+                        type: "POST",
+                        data: {'address': 'id'},
+                        success: function (data) {
+                        alert(data);
+                        }
+                    });
+                </script>
 	</head>
 	<body>
 		<a href="#list-problema" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -13,6 +26,7 @@
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                                <li><g:link class="create" action="createSolucao"><g:message code="default.new.label" args="[entityName1]" /></g:link></li>
 			</ul>
 		</div>
 		<div id="list-problema" class="content scaffold-list" role="main">

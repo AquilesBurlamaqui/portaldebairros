@@ -23,7 +23,9 @@ class ProblemaController {
         respond new Problema(params)
     }
     
-    
+    def createJson(){
+
+    }
     
      def upload(){
         def MediaInstance = new Media()

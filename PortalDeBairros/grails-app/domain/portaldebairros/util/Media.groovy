@@ -11,7 +11,7 @@ class Media {
     
     static constraints = {
         name(blank:false,nullable:false)
-        file(blank: true, nullable:true, maxSize:1073741824)
+        file(blank: true, nullable:true, maxSize: 1024 * 1024 * 2)
     }
     
      String toString(){
