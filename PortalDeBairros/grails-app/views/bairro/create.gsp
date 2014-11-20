@@ -25,14 +25,14 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-                        
+                        <div style=" margin-top: 200px"></div>
                         <center>
                             <g:uploadForm id="upload" name="upload" action="upload" target="hidden-upload-frame"> 
                                 <input id="arquivo" name="arquivo" type="file"/> <input id="enviar" name="enviar" type='button' value="enviar"/>
                             </g:uploadForm>
                             <iframe id="hidden-upload-frame" name="hidden-upload-frame" style="display: none;"></iframe>
 
-                            <g:message message="Envie o arquivo e depois o selecione em baixo no campo File" /> <br/></center>
+                            <g:message message="Anexe seu arquivo de media aqui em seguida o selecione." /> <br/></center>
                         <div id="show" align="center"></div>
 
 
