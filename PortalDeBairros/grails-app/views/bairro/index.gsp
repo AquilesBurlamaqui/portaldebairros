@@ -24,3 +24,27 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="nome" title="${message(code: 'bairro.nome.label', default: 'Nome')}" />
+					
+						<g:sortableColumn property="descricao" title="${message(code: 'bairro.descricao.label', default: 'Descricao')}" />
+					
+					</tr>
+				</thead>
+				<tbody>
+				<g:each in="${bairroInstanceList}" status="i" var="bairroInstance">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${bairroInstance.id}">${fieldValue(bean: bairroInstance, field: "nome")}</g:link></td>
+					
+						<td>${fieldValue(bean: bairroInstance, field: "descricao")}</td>
+					
+					</tr>
+				</g:each>
+				</tbody>
+			</table>
+			<div class="pagination">
+				<g:paginate total="${bairroInstanceCount ?: 0}" />
+			</div>
+		</div>
+	</body>
+</html>

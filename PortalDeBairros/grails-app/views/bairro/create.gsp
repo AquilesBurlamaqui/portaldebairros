@@ -25,7 +25,19 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form url="[resource:bairroInstance, action:'save']" >
+                        
+                        <center>
+                            <g:uploadForm id="upload" name="upload" action="upload" target="hidden-upload-frame"> 
+                                <input id="arquivo" name="arquivo" type="file"/> <input id="enviar" name="enviar" type='button' value="enviar"/>
+                            </g:uploadForm>
+                            <iframe id="hidden-upload-frame" name="hidden-upload-frame" style="display: none;"></iframe>
+
+                            <g:message message="Envie o arquivo e depois o selecione em baixo no campo File" /> <br/></center>
+                        <div id="show" align="center"></div>
+
+
+                        <g:form url="[resource:bairroInstance, action:'save']" >
+                            
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

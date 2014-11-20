@@ -4,6 +4,7 @@ package portaldebairros
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import portaldebairros.util.Media
 
 @Transactional(readOnly = true)
 class BairroController {
@@ -21,6 +22,15 @@ class BairroController {
 
     def create() {
         respond new Bairro(params)
+    }
+    
+    def upload(){
+        def MediaInstance = new Media()
+        def files = request.getFile('arquivo')
+        MediaInstance.name = files.originalFilename
+        MediaInstance.file = files.getBytes()
+        MediaInstance.save()
+        MediaInstance.delete()
     }
 
     @Transactional
