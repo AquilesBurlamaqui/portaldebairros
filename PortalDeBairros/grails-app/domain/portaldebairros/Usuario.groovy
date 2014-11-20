@@ -1,5 +1,11 @@
 package portaldebairros
 
+import org.springframework.security.authentication.AuthenticationServiceException;  
+import org.springframework.security.core.Authentication;  
+import org.springframework.security.core.context.SecurityContext;  
+import org.springframework.security.core.context.SecurityContextHolder;  
+import org.springframework.security.core.userdetails.User;  
+
 class Usuario {
 
 	transient springSecurityService
@@ -39,4 +45,13 @@ class Usuario {
 	protected void encodePassword() {
 		password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
 	}
+        
+    
+    //retorna usuario logado  
+    String toString()
+    {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String name = auth.getName(); //get logged in username
+        return name;
+    }
 }

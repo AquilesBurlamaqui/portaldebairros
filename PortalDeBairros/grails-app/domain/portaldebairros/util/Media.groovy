@@ -1,13 +1,20 @@
 package portaldebairros.util
+import  portaldebairros.Problema
+import  portaldebairros.Orcamento
+
+
 
 class Media {
     
-    int tamanho
-    String nome
-    String formato
-    byte[] arquivo
+    String name 
+    byte[] file
     
     static constraints = {
-        arquivo maxSize: 1024*1204*5
+        name(blank:false,nullable:false)
+        file(blank: true, nullable:true, maxSize:1073741824)
     }
+    
+     String toString(){
+     return name
+     } 
 }

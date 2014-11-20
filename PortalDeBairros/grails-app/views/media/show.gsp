@@ -23,36 +23,18 @@
 			</g:if>
 			<ol class="property-list media">
 			
-				<g:if test="${mediaInstance?.arquivo}">
+				<g:if test="${mediaInstance?.name}">
 				<li class="fieldcontain">
-					<span id="arquivo-label" class="property-label"><g:message code="media.arquivo.label" default="Arquivo" /></span>
+					<span id="name-label" class="property-label"><g:message code="media.name.label" default="Name" /></span>
+					
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${mediaInstance}" field="name"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${mediaInstance?.formato}">
+				<g:if test="${mediaInstance?.file}">
 				<li class="fieldcontain">
-					<span id="formato-label" class="property-label"><g:message code="media.formato.label" default="Formato" /></span>
-					
-						<span class="property-value" aria-labelledby="formato-label"><g:fieldValue bean="${mediaInstance}" field="formato"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${mediaInstance?.nome}">
-				<li class="fieldcontain">
-					<span id="nome-label" class="property-label"><g:message code="media.nome.label" default="Nome" /></span>
-					
-						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${mediaInstance}" field="nome"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${mediaInstance?.tamanho}">
-				<li class="fieldcontain">
-					<span id="tamanho-label" class="property-label"><g:message code="media.tamanho.label" default="Tamanho" /></span>
-					
-						<span class="property-value" aria-labelledby="tamanho-label"><g:fieldValue bean="${mediaInstance}" field="tamanho"/></span>
+					<span id="file-label" class="property-label"><g:message code="media.file.label" default="File" /></span>
 					
 				</li>
 				</g:if>
