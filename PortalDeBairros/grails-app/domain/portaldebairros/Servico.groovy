@@ -1,13 +1,17 @@
 package portaldebairros
 
+import portaldebairros.util.Media
+
 class Servico {
     String nome
-    //Usuario usuario
+    Usuario usuario 
     String descricao
+    Media imagem
     static constraints = {
         nome()
-        //usuario()
+        usuario()
         descricao widget: 'textarea' 
+        imagem()
     }
     
     String toString() {

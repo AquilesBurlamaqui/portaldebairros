@@ -23,6 +23,60 @@
 			</g:if>
 			<ol class="property-list empresa">
 			
+				<g:if test="${empresaInstance?.nome}">
+				<li class="fieldcontain">
+					<span id="nome-label" class="property-label"><g:message code="empresa.nome.label" default="Nome" /></span>
+					
+						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${empresaInstance}" field="nome"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${empresaInstance?.endereco}">
+				<li class="fieldcontain">
+					<span id="endereco-label" class="property-label"><g:message code="empresa.endereco.label" default="Endereco" /></span>
+					
+						<span class="property-value" aria-labelledby="endereco-label"><g:fieldValue bean="${empresaInstance}" field="endereco"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${empresaInstance?.CNPJ}">
+				<li class="fieldcontain">
+					<span id="CNPJ-label" class="property-label"><g:message code="empresa.CNPJ.label" default="CNPJ" /></span>
+					
+						<span class="property-value" aria-labelledby="CNPJ-label"><g:fieldValue bean="${empresaInstance}" field="CNPJ"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${empresaInstance?.descricao}">
+				<li class="fieldcontain">
+					<span id="descricao-label" class="property-label"><g:message code="empresa.descricao.label" default="Descricao" /></span>
+					
+						<span class="property-value" aria-labelledby="descricao-label"><g:fieldValue bean="${empresaInstance}" field="descricao"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${empresaInstance?.contato}">
+				<li class="fieldcontain">
+					<span id="contato-label" class="property-label"><g:message code="empresa.contato.label" default="Contato" /></span>
+					
+						<span class="property-value" aria-labelledby="contato-label"><g:fieldValue bean="${empresaInstance}" field="contato"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${empresaInstance?.email}">
+				<li class="fieldcontain">
+					<span id="email-label" class="property-label"><g:message code="empresa.email.label" default="Email" /></span>
+					
+						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${empresaInstance}" field="email"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:empresaInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

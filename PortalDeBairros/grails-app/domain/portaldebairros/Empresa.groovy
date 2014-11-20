@@ -2,7 +2,7 @@ package portaldebairros
 
 class Empresa {
     String nome
-    Endereco endereco
+    String endereco
     String CNPJ
     String descricao
     int contato
@@ -11,9 +11,9 @@ class Empresa {
     static constraints = {
         nome()
         endereco()
-        CNPJ()
+        CNPJ(size:18..18)
         descricao widget: 'textarea'
         contato()
-        email()
+        email(email:true)
     }
 }

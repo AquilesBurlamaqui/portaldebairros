@@ -24,11 +24,35 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="nome" title="${message(code: 'empresa.nome.label', default: 'Nome')}" />
+					
+						<g:sortableColumn property="endereco" title="${message(code: 'empresa.endereco.label', default: 'Endereco')}" />
+					
+						<g:sortableColumn property="CNPJ" title="${message(code: 'empresa.CNPJ.label', default: 'CNPJ')}" />
+					
+						<g:sortableColumn property="descricao" title="${message(code: 'empresa.descricao.label', default: 'Descricao')}" />
+					
+						<g:sortableColumn property="contato" title="${message(code: 'empresa.contato.label', default: 'Contato')}" />
+					
+						<g:sortableColumn property="email" title="${message(code: 'empresa.email.label', default: 'Email')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${empresaInstanceList}" status="i" var="empresaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${empresaInstance.id}">${fieldValue(bean: empresaInstance, field: "nome")}</g:link></td>
+					
+						<td>${fieldValue(bean: empresaInstance, field: "endereco")}</td>
+					
+						<td>${fieldValue(bean: empresaInstance, field: "CNPJ")}</td>
+					
+						<td>${fieldValue(bean: empresaInstance, field: "descricao")}</td>
+					
+						<td>${fieldValue(bean: empresaInstance, field: "contato")}</td>
+					
+						<td>${fieldValue(bean: empresaInstance, field: "email")}</td>
 					
 					</tr>
 				</g:each>
