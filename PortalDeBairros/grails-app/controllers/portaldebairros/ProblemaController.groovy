@@ -11,8 +11,9 @@ class ProblemaController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
+        def problemas = Problema.list()
         params.max = Math.min(max ?: 10, 100)
-        respond Problema.list(params), model:[problemaInstanceCount: Problema.count()]
+        respond Problema.list(params), model:[problemaInstanceCount: Problema.count(), problemas:problemas]
     }
 
     def show(Problema problemaInstance) {
