@@ -72,7 +72,7 @@
                                     </ul>
                                 </li>
                                 <li class="active">
-                                    <a href="section.html">Section</a>
+                                    <a href="section.html">Empresas</a>
                                 </li>
                                 <li>
                                     <a href="authors.html">Authors</a>
@@ -130,7 +130,7 @@
                         <p class="by-line">By I. P. Freely</p>
                     </div>    
                     <div class="dot-overlay"></div>
-                    <img src="images/image-10.jpg" alt="" />
+                    <asset:image src="image-10.jpg" alt=""/>
                 </div>
                 <div class="col-sm-5 section-preview">
                     <div class="section-preview-title">
@@ -138,7 +138,7 @@
                         <p class="by-line">By Johnny B. Good</p>
                     </div>
                     <div class="dot-overlay"></div>
-                    <img src="images/image-12.jpg" alt="" />
+                    <asset:image src="image-12.jpg" alt=""/>
                 </div>
             </div>
             <div class="row section-header">
@@ -148,7 +148,7 @@
                         <p class="by-line">By Vera Brown</p>
                     </div>
                     <div class="dot-overlay"></div>
-                    <img src="images/image-14.jpg" alt="" />
+                    <asset:image src="image-14.jpg" alt=""/>
                 </div>
                 <div class="col-sm-8 section-preview">
                     <div class="section-preview-title">
@@ -156,7 +156,7 @@
                         <p class="by-line">By J. R. Hartley</p>
                     </div>
                     <div class="dot-overlay"></div>
-                    <img src="images/image-18.jpg" alt="" />
+                    <asset:image src="image-18.jpg" alt=""/>
                 </div>
             </div>
         </section>
@@ -168,7 +168,7 @@
                         <div class="row">
                             <div class="col-xs-4 content-col">
                                 <div class="dot-overlay"></div>
-                                <img src="images/image-4-square.jpg" alt="" />
+                                <asset:image src="image-4-square.jpg" alt=""/>
                             </div>
                             <div class="col-xs-8 content-col">    
                                 <div class="article-content">
@@ -187,7 +187,7 @@
                                 <div id="comments-1-collapse" class="comments-container collapse">
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-4-64.jpg" alt="" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>                                      
                                         <div class="media-body">
                                             <h4 class="media-heading">Cras sit amet nibh libero...</h4>
@@ -199,7 +199,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Nulla vel metus scelerisque!</h4>
@@ -211,7 +211,7 @@
                                                     <!-- NESTED COMMENT -->
                                                     <div class="media">
                                                         <a class="pull-left" href="#">
-                                                            <img src="images/person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                            <asset:image src="person-2-64.jpg"  style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                         </a>
                                                         <div class="media-body">
                                                             <h4 class="media-heading">Gravida nulla</h4>
@@ -227,7 +227,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Scelerisque ante sollicitudin commodo</h4>
@@ -248,7 +248,7 @@
                         <div class="row">
                             <div class="col-xs-4 content-col">
                                 <div class="dot-overlay"></div>
-                                <img src="images/image-9-square.jpg" alt="" />
+                                <asset:image src="image-9-square.jpg" alt="" />
                             </div>
                             <div class="col-xs-8 content-col">    
                                 <div class="article-content">
@@ -267,7 +267,7 @@
                                 <div id="comments-2-collapse" class="comments-container collapse">
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-4-64.jpg"  style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>                                      
                                         <div class="media-body">
                                             <h4 class="media-heading">Cras sit amet nibh libero...</h4>
@@ -279,7 +279,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-1-64.jpg"  style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Nulla vel metus scelerisque!</h4>
@@ -291,7 +291,7 @@
                                                     <!-- NESTED COMMENT -->
                                                     <div class="media">
                                                         <a class="pull-left" href="#">
-                                                            <img src="images/person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                            <asset:image src="person-2-64.jpg"  style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                         </a>
                                                         <div class="media-body">
                                                             <h4 class="media-heading">Gravida nulla</h4>
@@ -307,7 +307,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Scelerisque ante sollicitudin commodo</h4>
@@ -328,7 +328,7 @@
                         <div class="row">
                             <div class="col-xs-4 content-col">
                                 <div class="dot-overlay"></div>
-                                <img src="images/image-17-square.jpg" alt="" />
+                                <asset:image src="image-17-square.jpg" alt="" />
                             </div>
                             <div class="col-xs-8 content-col">    
                                 <div class="article-content">
@@ -347,7 +347,7 @@
                                 <div id="comments-3-collapse" class="comments-container collapse">
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>                                      
                                         <div class="media-body">
                                             <h4 class="media-heading">Cras sit amet nibh libero...</h4>
@@ -359,7 +359,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Nulla vel metus scelerisque!</h4>
@@ -371,7 +371,7 @@
                                                     <!-- NESTED COMMENT -->
                                                     <div class="media">
                                                         <a class="pull-left" href="#">
-                                                            <img src="images/person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                            <asset:image src="person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                         </a>
                                                         <div class="media-body">
                                                             <h4 class="media-heading">Gravida nulla</h4>
@@ -387,7 +387,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Scelerisque ante sollicitudin commodo</h4>
@@ -408,7 +408,7 @@
                         <div class="row">
                             <div class="col-xs-4 content-col">
                                 <div class="dot-overlay"></div>
-                                <img src="images/image-19-square.jpg" alt="" />
+                                <asset:image src="image-19-square.jpg" alt="" />
                             </div>
                             <div class="col-xs-8 content-col">    
                                 <div class="article-content">
@@ -427,7 +427,7 @@
                                 <div id="comments-4-collapse" class="comments-container collapse">
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>                                      
                                         <div class="media-body">
                                             <h4 class="media-heading">Cras sit amet nibh libero...</h4>
@@ -439,7 +439,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Nulla vel metus scelerisque!</h4>
@@ -451,7 +451,7 @@
                                                     <!-- NESTED COMMENT -->
                                                     <div class="media">
                                                         <a class="pull-left" href="#">
-                                                            <img src="images/person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                            <asset:image src="person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                         </a>
                                                         <div class="media-body">
                                                             <h4 class="media-heading">Gravida nulla</h4>
@@ -467,7 +467,7 @@
                                             <!-- NESTED COMMENT -->
                                             <div class="media">
                                                 <a class="pull-left" href="#">
-                                                    <img src="images/person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                                    <asset:image src="person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                                 </a>
                                                 <div class="media-body">
                                                     <h4 class="media-heading">Scelerisque ante sollicitudin commodo</h4>
@@ -522,7 +522,7 @@
                                 <div class="article-content">
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-4-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>                                      
                                         <div class="media-body">
                                             <h4 class="media-heading">Cras sit amet nibh libero...</h4>
@@ -535,7 +535,7 @@
                                     </div>
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-1-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>
                                         <div class="media-body">
                                             <h4 class="media-heading">Nulla vel metus scelerisque!</h4>
@@ -549,7 +549,7 @@
                                     </div>
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-2-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>
                                         <div class="media-body">
                                             <h4 class="media-heading">Gravida nulla</h4>
@@ -563,7 +563,7 @@
                                     <!-- NESTED COMMENT -->
                                     <div class="media">
                                         <a class="pull-left" href="#">
-                                            <img src="images/person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt="">
+                                            <asset:image src="person-3-64.jpg" style="width: 64px; height: 64px;" class="media-object" alt=""/>
                                         </a>
                                         <div class="media-body">
                                             <h4 class="media-heading">Scelerisque ante sollicitudin commodo</h4>
@@ -594,7 +594,7 @@
                             </div>
                             <div class="tab-pane fade" id="reviews">
                                 <div class="article-content">
-                                    <img src="images/image-2.jpg" alt="">
+                                    <asset:image src="image-2.jpg" alt=""/>
                                     <h4>Nulla vel metus scelerisque</h4>
                                     <p>20.1.14</p>
                                     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo...</p>
