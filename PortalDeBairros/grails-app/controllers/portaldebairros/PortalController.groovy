@@ -2,5 +2,11 @@ package portaldebairros
 
 class PortalController {
 
-    def index() { }
+    def index() {
+    
+    }
+    
+    def section() {
+        
+    }
 }

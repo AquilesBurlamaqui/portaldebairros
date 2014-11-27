@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="hopkirk">
 		<g:set var="entityName" value="${message(code: 'noticia.label', default: 'Noticia')}" />
 		<g:javascript src="js/tinymce/tinymce.min.js"/>
                 

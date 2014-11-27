@@ -3,6 +3,7 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
+     <meta name="layout" content="hopkirk">
     <title>Hopkirk - Journalism Theme</title>
     <meta name="description" content="Hopkirk is a modern journalism theme." />                                                              
     <!-- TWITTER CARDS -->
