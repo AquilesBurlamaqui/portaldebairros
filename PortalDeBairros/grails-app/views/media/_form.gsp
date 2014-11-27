@@ -2,39 +2,21 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: mediaInstance, field: 'arquivo', 'error')} required">
-	<label for="arquivo">
-		<g:message code="media.arquivo.label" default="Arquivo" />
+<div class="fieldcontain ${hasErrors(bean: mediaInstance, field: 'name', 'error')} required">
+	<label for="name">
+		<g:message code="media.name.label" default="Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<input type="file" id="arquivo" name="arquivo" />
+	<g:textField name="name" required="" value="${mediaInstance?.name}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: mediaInstance, field: 'formato', 'error')} required">
-	<label for="formato">
-		<g:message code="media.formato.label" default="Formato" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: mediaInstance, field: 'file', 'error')} ">
+	<label for="file">
+		<g:message code="media.file.label" default="File" />
+		
 	</label>
-	<g:textField name="formato" required="" value="${mediaInstance?.formato}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: mediaInstance, field: 'nome', 'error')} required">
-	<label for="nome">
-		<g:message code="media.nome.label" default="Nome" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="nome" required="" value="${mediaInstance?.nome}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: mediaInstance, field: 'tamanho', 'error')} required">
-	<label for="tamanho">
-		<g:message code="media.tamanho.label" default="Tamanho" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="tamanho" type="number" value="${mediaInstance.tamanho}" required=""/>
+	<input type="file" id="file" name="file" />
 
 </div>
 

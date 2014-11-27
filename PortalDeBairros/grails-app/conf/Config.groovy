@@ -1,3 +1,6 @@
+
+import portaldebairros.Noticia
+
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -138,17 +141,15 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'portaldebairros.Usuario'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'portaldebairros.UsuarioPapel'
 grails.plugin.springsecurity.authority.className = 'portaldebairros.Papel'
-grails.plugin.springsecurity.securityConfigType = "Annotation"
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
-        '/inicial/**':                    ['ROLE_USER'],
-        '/**':                            ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/assets/**':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/**/favicon.ico':                ['permitAll'],
+        '/**': ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
