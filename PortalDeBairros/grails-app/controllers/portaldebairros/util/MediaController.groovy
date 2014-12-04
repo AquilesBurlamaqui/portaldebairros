@@ -7,9 +7,9 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class MediaController {
-
+     def mediaService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+    
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Media.list(params), model:[mediaInstanceCount: Media.count()]
@@ -24,17 +24,12 @@ class MediaController {
     }
     
     def download(){
-        def media = Media.get(params.id)
-        response.setContentType("application/octet-stream")
-        response.setHeader("Content-disposition", "attachment; filename= ${media.getName()}")
-        response.outputStream << media.file
-        response.outputStream.flush()
+        mediaService.download(params.id, response)
+       
     }
     
-     def viewImage = {
-      def imagem = Media.get( params.id )
-      byte[] image = imagem.file 
-      response.outputStream << image
+     def viewImage() {
+      mediaService.viewImage(params.id, response)
     } 
 
     @Transactional

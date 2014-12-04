@@ -7,6 +7,7 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class ProblemaController {
+    def mediaService
     
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -29,12 +30,8 @@ class ProblemaController {
     }
     
      def upload(){
-        def MediaInstance = new Media()
         def files = request.getFile('arquivo')
-        MediaInstance.name = files.originalFilename
-        MediaInstance.file = files.getBytes()
-        MediaInstance.save()
-        MediaInstance.delete()
+        mediaService.uploadFile(files)
      }
      
     def createSolucao() {
