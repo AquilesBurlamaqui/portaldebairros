@@ -7,12 +7,14 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class ProblemaController {
+    def mediaService
     
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
+        def problemas = Problema.list()
         params.max = Math.min(max ?: 10, 100)
-        respond Problema.list(params), model:[problemaInstanceCount: Problema.count()]
+        respond Problema.list(params), model:[problemaInstanceCount: Problema.count(), problemas:problemas]
     }
 
     def show(Problema problemaInstance) {
@@ -23,15 +25,9 @@ class ProblemaController {
         respond new Problema(params)
     }
     
-    
-    
      def upload(){
-        def MediaInstance = new Media()
         def files = request.getFile('arquivo')
-        MediaInstance.name = files.originalFilename
-        MediaInstance.file = files.getBytes()
-        MediaInstance.save()
-        MediaInstance.delete()
+        mediaService.uploadFile(files)
      }
      
     def createSolucao() {
