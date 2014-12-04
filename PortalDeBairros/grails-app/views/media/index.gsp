@@ -36,7 +36,7 @@
 					
 						<td><g:link action="show" id="${mediaInstance.id}">${fieldValue(bean: mediaInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: mediaInstance, field: "file")}</td>
+						<td>${fieldValue(bean: mediaInstance, field: "file").size()}</td>
 					
 					</tr>
 				</g:each>

@@ -25,6 +25,10 @@ class ProblemaController {
         respond new Problema(params)
     }
     
+    def createJson(){
+
+    }
+    
      def upload(){
         def files = request.getFile('arquivo')
         mediaService.uploadFile(files)

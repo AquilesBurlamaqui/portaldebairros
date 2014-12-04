@@ -7,9 +7,9 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class MediaController {
-
+     def mediaService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+    
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Media.list(params), model:[mediaInstanceCount: Media.count()]
@@ -22,6 +22,15 @@ class MediaController {
     def create() {
         respond new Media(params)
     }
+    
+    def download(){
+        mediaService.download(params.id, response)
+       
+    }
+    
+     def viewImage() {
+      mediaService.viewImage(params.id, response)
+    } 
 
     @Transactional
     def save(Media mediaInstance) {

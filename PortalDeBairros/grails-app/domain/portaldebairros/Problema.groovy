@@ -22,4 +22,8 @@ class Problema {
     String toString(){
      return nome
      } 
+     
+     def jsonBuilder = new groovy.json.JsonBuilder()
+
+
 }
