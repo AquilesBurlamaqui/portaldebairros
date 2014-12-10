@@ -14,6 +14,7 @@ class Noticia {
         titulo()
         descricao widget:"textarea" 
         
+        
     }
     
     String toString(){

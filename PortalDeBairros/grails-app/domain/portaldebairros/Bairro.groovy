@@ -5,7 +5,8 @@ import portaldebairros.util.Media
 class Bairro {
     String nome
     String descricao
-    Media imagem
+    
+    static hasMany = [media: Media]
     
     
     static constraints = {
@@ -13,7 +14,7 @@ class Bairro {
         descricao widget:'textarea'
               
         
-        //teste pedro
+        media()
     }
     
     String toString(){

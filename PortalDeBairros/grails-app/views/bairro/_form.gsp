@@ -20,12 +20,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: bairroInstance, field: 'imagem', 'error')} required">
-	<label for="imagem">
-		<g:message code="bairro.imagem.label" default="Imagem" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: bairroInstance, field: 'media', 'error')} ">
+	<label for="media">
+		<g:message code="bairro.media.label" default="Media" />
+		
 	</label>
-	<g:select id="imagem" name="imagem.id" from="${portaldebairros.util.Media.list()}" optionKey="id" required="" value="${bairroInstance?.imagem?.id}" class="many-to-one"/>
+	<g:select name="media" from="${portaldebairros.util.Media.list()}" multiple="multiple" optionKey="id" size="5" value="${bairroInstance?.media*.id}" class="many-to-many"/>
 
 </div>
 

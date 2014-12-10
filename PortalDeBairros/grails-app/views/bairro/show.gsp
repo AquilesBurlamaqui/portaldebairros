@@ -41,11 +41,13 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${bairroInstance?.imagem}">
+				<g:if test="${bairroInstance?.media}">
 				<li class="fieldcontain">
-					<span id="imagem-label" class="property-label"><g:message code="bairro.imagem.label" default="Imagem" /></span>
+					<span id="media-label" class="property-label"><g:message code="bairro.media.label" default="Media" /></span>
 					
-						<span class="property-value" aria-labelledby="imagem-label"><g:link controller="media" action="show" id="${bairroInstance?.imagem?.id}">${bairroInstance?.imagem?.encodeAsHTML()}</g:link></span>
+						<g:each in="${bairroInstance.media}" var="m">
+						<span class="property-value" aria-labelledby="media-label"><g:link controller="media" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
