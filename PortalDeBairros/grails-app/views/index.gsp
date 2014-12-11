@@ -120,6 +120,7 @@
                                         <g:link controller="servico" action="index">Listar Servicos</g:link></br>
                                         <g:link controller="usuario" action="index">Listar Usuario</g:link></br>
                                         <g:link controller="bairro" action="index">Listar Bairros</g:link></br>
+                                        <g:link controller="noticia" action="index">Listar Noticias</g:link></br>
                                         
                                       
 				</ul>
