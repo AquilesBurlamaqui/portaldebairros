@@ -11,7 +11,7 @@
                 var coordinates;
                 geocoder.geocode({address : address}, function (results, status){
                 coord_obj = results[0].geometry.location;
-                coordinates = [coord_obj.B, coord_obj.k];
+                coordinates = [coord_obj.D, coord_obj.k];
                 callback(coordinates);
                  });
                 }
@@ -20,7 +20,7 @@
                 function initialize() {
                   getCoordinates('Natal', function(coords){
                   var mapOptions = {
-                    zoom: 17,
+                    zoom: 8,
                     center: new google.maps.LatLng(coords[1], coords[0])
                   };
                   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -65,9 +65,6 @@
                 
 
                 google.maps.event.addDomListener(window, 'load', initialize);
-                google.maps.event.addListener(map, 'click', function(event) {
-                    placeMarker(event.latLng);
-                });
                     
                  
                
