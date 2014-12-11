@@ -7,6 +7,7 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class NoticiaController {
+    def mediaService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -22,6 +23,13 @@ class NoticiaController {
     def create() {
         respond new Noticia(params)
     }
+    
+    def upload(){
+        def files = request.getFile('arquivo')
+        mediaService.uploadFile(files)
+     }
+     
+   
 
     @Transactional
     def save(Noticia noticiaInstance) {
