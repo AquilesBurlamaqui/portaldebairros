@@ -25,20 +25,14 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-                        <div style=" margin-top: 200px"></div>
-                        <center>
-                            <g:uploadForm id="upload" name="upload" action="upload" target="hidden-upload-frame"> 
-                                <input id="arquivo" name="arquivo" type="file"/> <input id="enviar" name="enviar" type='button' value="enviar"/>
-                            </g:uploadForm>
-                            <iframe id="hidden-upload-frame" name="hidden-upload-frame" style="display: none;"></iframe>
-
-                            <g:message message="Anexe seu arquivo de media aqui em seguida o selecione." /> <br/></center>
-                        <div id="show" align="center"></div>
-
-
-                        <g:form url="[resource:bairroInstance, action:'save']" >
-                            
+			<g:form url="[resource:bairroInstance, action:'save']"  enctype="multipart/form-data">
 				<fieldset class="form">
+<!--                                    <div class="fieldcontain ${hasErrors(bean: bairroInstance, field: 'imagem', 'error')} ">
+                                        <label for="imagem">
+                                            <g:message code="bairro.imagem.label" default="Imagem" />
+                                        </label>
+                                        <input type="file" id="imagem" name="imagem" />
+                                    </div>-->
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">

@@ -41,14 +41,66 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${bairroInstance?.media}">
+				<g:if test="${bairroInstance?.noticias}">
 				<li class="fieldcontain">
-					<span id="media-label" class="property-label"><g:message code="bairro.media.label" default="Media" /></span>
+					<span id="noticias-label" class="property-label"><g:message code="bairro.noticias.label" default="Noticias" /></span>
 					
-						<g:each in="${bairroInstance.media}" var="m">
-						<span class="property-value" aria-labelledby="media-label"><g:link controller="media" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						<g:each in="${bairroInstance.noticias}" var="n">
+						<span class="property-value" aria-labelledby="noticias-label"><g:link controller="noticia" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
+				</li>
+				</g:if>
+			
+				<g:if test="${bairroInstance?.problemas}">
+				<li class="fieldcontain">
+					<span id="problemas-label" class="property-label"><g:message code="bairro.problemas.label" default="Problemas" /></span>
+					
+						<g:each in="${bairroInstance.problemas}" var="p">
+						<span class="property-value" aria-labelledby="problemas-label"><g:link controller="problema" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${bairroInstance?.solucoes}">
+				<li class="fieldcontain">
+					<span id="solucoes-label" class="property-label"><g:message code="bairro.solucoes.label" default="Solucoes" /></span>
+					
+						<g:each in="${bairroInstance.solucoes}" var="s">
+						<span class="property-value" aria-labelledby="solucoes-label"><g:link controller="solucao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${bairroInstance?.servicos}">
+				<li class="fieldcontain">
+					<span id="servicos-label" class="property-label"><g:message code="bairro.servicos.label" default="Servicos" /></span>
+					
+						<g:each in="${bairroInstance.servicos}" var="s">
+						<span class="property-value" aria-labelledby="servicos-label"><g:link controller="servico" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${bairroInstance?.imoveis}">
+				<li class="fieldcontain">
+					<span id="imoveis-label" class="property-label"><g:message code="bairro.imoveis.label" default="Imoveis" /></span>
+					
+						<g:each in="${bairroInstance.imoveis}" var="i">
+						<span class="property-value" aria-labelledby="imoveis-label"><g:link controller="imovel" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${bairroInstance?.imagem}">
+				<li class="fieldcontain">
+					<span id="imagem-label" class="property-label"><g:message code="bairro.imagem.label" default="Imagem" /></span>
+					
+                                        <img src="${createLink(action:'displayImagem', id:bairroInstance?.id)}" width="720" height="550" style=" margin-top: 10px; margin-left: 45px"/>
 				</li>
 				</g:if>
 			

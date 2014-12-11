@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="descricao" title="${message(code: 'bairro.descricao.label', default: 'Descricao')}" />
 					
+						<g:sortableColumn property="imagem" title="${message(code: 'bairro.imagem.label', default: 'Imagem')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -38,6 +40,9 @@
 					
 						<td>${fieldValue(bean: bairroInstance, field: "descricao")}</td>
 					
+						 <td><img src="${createLink(action:'displayImagem', id:bairroInstance?.id)}" width="380" height="265"/></td>
+                                                
+                                               					
 					</tr>
 				</g:each>
 				</tbody>
