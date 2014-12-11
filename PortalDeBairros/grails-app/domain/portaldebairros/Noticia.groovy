@@ -7,13 +7,14 @@ class Noticia {
     String descricao
     Usuario usuario
     
-    static hasmany = [imagem: Media]
+    static hasMany = [imagem: Media]
       
-    //modificado
+    
     static constraints = {
         titulo()
         descricao widget:"textarea" 
         
+        imagem()
         
     }
     
