@@ -20,6 +20,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: noticiaInstance, field: 'imagem', 'error')} ">
+	<label for="imagem">
+		<g:message code="noticia.imagem.label" default="Imagem" />
+		
+	</label>
+	<g:select name="imagem" from="${portaldebairros.util.Media.list()}" multiple="multiple" optionKey="id" size="5" value="${noticiaInstance?.imagem*.id}" class="many-to-many"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: noticiaInstance, field: 'usuario', 'error')} required">
 	<label for="usuario">
 		<g:message code="noticia.usuario.label" default="Usuario" />

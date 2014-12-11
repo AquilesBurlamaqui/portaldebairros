@@ -41,6 +41,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${noticiaInstance?.imagem}">
+				<li class="fieldcontain">
+					<span id="imagem-label" class="property-label"><g:message code="noticia.imagem.label" default="Imagem" /></span>
+					
+						<g:each in="${noticiaInstance.imagem}" var="i">
+						<span class="property-value" aria-labelledby="imagem-label"><g:link controller="media" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${noticiaInstance?.usuario}">
 				<li class="fieldcontain">
 					<span id="usuario-label" class="property-label"><g:message code="noticia.usuario.label" default="Usuario" /></span>

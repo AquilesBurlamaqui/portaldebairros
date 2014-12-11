@@ -5,10 +5,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'noticia.label', default: 'Noticia')}" />
-		<g:javascript src="js/tinymce/tinymce.min.js"/>
-                
-                <script>tinymce.init({selector:'textarea'});</script>
-                <title><g:message code="default.list.label" args="[entityName]" /></title>
+		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
 		<a href="#list-noticia" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -44,6 +41,8 @@
 						<td>${fieldValue(bean: noticiaInstance, field: "descricao")}</td>
 					
 						<td>${fieldValue(bean: noticiaInstance, field: "usuario")}</td>
+                                                
+                                                <td><img src="${createLink(action:'displayImagem', id:noticiaInstance?.id)}" width="380" height="265"/></td>
 					
 					</tr>
 				</g:each>
