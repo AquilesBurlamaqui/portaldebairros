@@ -1,20 +1,25 @@
 package portaldebairros
 
-import portaldebairros.util.Media
-
 class Bairro {
     String nome
     String descricao
     
-    static hasMany = [media: Media]
+    byte[] imagem
+    
+    static hasMany = [problemas : Problema, servicos : Servico, imoveis : Imovel, noticias : Noticia, solucoes : Solucao]
     
     
     static constraints = {
         nome()
         descricao widget:'textarea'
-              
         
-        media()
+        noticias()
+        problemas()
+        solucoes()
+        servicos()
+        imoveis()
+        
+        imagem(nullable:true, maxSize: 1073741824)
     }
     
     String toString(){
