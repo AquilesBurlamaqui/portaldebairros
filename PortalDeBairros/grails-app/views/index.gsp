@@ -119,6 +119,8 @@
                                         <g:link controller="empresa" action="index"><asset:image src="agencia.png" alt="Empresas" width="100" height="100"/></g:link></br>
                                         <g:link controller="servico" action="index">Listar Servicos</g:link></br>
                                         <g:link controller="usuario" action="index">Listar Usuario</g:link></br>
+                                        <g:link controller="bairro" action="index">Listar Bairros</g:link></br>
+                                        
                                       
 				</ul>
 			</div>
