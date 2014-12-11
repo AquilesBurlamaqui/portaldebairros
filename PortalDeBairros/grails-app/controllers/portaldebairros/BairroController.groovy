@@ -4,7 +4,6 @@ package portaldebairros
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-import portaldebairros.util.Media
 
 @Transactional(readOnly = true)
 class BairroController {
@@ -23,37 +22,25 @@ class BairroController {
     def create() {
         respond new Bairro(params)
     }
-    
-    def upload(){
-        def MediaInstance = new Media()
-        def files = request.getFile('arquivo')
-        MediaInstance.name = files.originalFilename
-        MediaInstance.file = files.getBytes()
-        MediaInstance.save()
-        MediaInstance.delete()
+    def displayImagem() {
+        def bairroInstance = Bairro.get(params.id)
+        byte[] imagem = bairroInstance.imagem
+        response.outputStream << bairroInstance.imagem 
+        response.outputStream.flush()
+     }
+     def image= {
+        def bairroInstance = Bairro.get( params.id )
+        byte[] image = bairroInstance.image
+        response.outputStream << image
     }
 
     @Transactional
-    def save(Bairro bairroInstance) {
-        if (bairroInstance == null) {
-            notFound()
-            return
-        }
-
-        if (bairroInstance.hasErrors()) {
-            respond bairroInstance.errors, view:'create'
-            return
-        }
-
-        bairroInstance.save flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'bairro.label', default: 'Bairro'), bairroInstance.id])
-                redirect bairroInstance
-            }
-            '*' { respond bairroInstance, [status: CREATED] }
-        }
+    def save() {
+        def bairroInstance = new Bairro(params)
+        def uploadedFile = request.getFile('imagem')
+        bairroInstance.imagem = uploadedFile.getBytes() 
+        bairroInstance.save()
+        redirect(action: "index")
     }
 
     def edit(Bairro bairroInstance) {
