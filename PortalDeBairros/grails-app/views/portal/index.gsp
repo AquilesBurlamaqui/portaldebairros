@@ -83,13 +83,16 @@
                         <!-- ITEM 1 -->
                         <div class="item active">
                            
-                            <asset:image src="image-7.jpg"/>
+                            <!--<asset:image src="image-7.jpg"/>-->
+                           
+                            <img width="150px" height="150px" title= "${listaNews.imagem[0]?.encodeAsHTML()}" class="Media" src="${createLink(controller:'media', action:'viewImage', id:"${listaNews.imagem[0].id}")}" />
+                            
                           
                             <div class="filmgrain"></div>    
                             <div class="carousel-caption">
-                                <h3>Pellentesque habitant morbi tristique senectus</h3>
+                                <h3>${listaNews}</h3>
                                 <p class="by-line">By Arthur Daley</p>
-                                <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. </p>
+                                <p>${listaNews.descricao}</p>
                             </div>
                         </div>
                         <!-- ITEM 2 -->
