@@ -4,8 +4,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'noticia.label', default: 'Noticia')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
-                <g:javascript src="tinymce/tinymce.min.js"/>
-                <script>tinymce.init({selector:'textarea'});</script>
+                
                   <script type="text/javascript" language="javascript">
                        
                     
@@ -52,7 +51,8 @@
 			</ul>
 			</g:hasErrors><center>
                                 <g:uploadForm id="upload" name="upload" action="upload" target="iframe"> 
-                              <input id="arquivo" name="arquivo" type="file" accept="image/*"/> <input id="enviar" name="enviar" type='button' value="enviar"/>
+                                        <input id="arquivo" name="arquivo" type="file" accept="image/*"/> 
+                                        <input id="enviar" name="enviar" type='button' value="enviar"/>
                                 </g:uploadForm>
                               <iframe id="iframe" onload='setFrameLoaded();' name="iframe" style="display: none;"></iframe>
 

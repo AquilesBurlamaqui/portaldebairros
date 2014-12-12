@@ -1,6 +1,14 @@
 <%@ page import="portaldebairros.Noticia" %>
+<g:javascript src="ckeditor/ckeditor.js"/>
 
+<div id="mediaList" name="mediaList" class="fieldcontain ${hasErrors(bean: problemaInstance, field: 'media', 'error')} ">
+	<label for="media">
+		<g:message code="problema.media.label" default="Media" />
+		
+	</label>
+	<g:select name="imagem" from="${portaldebairros.util.Media.list()}" multiple="true" optionKey="id" size="5" value="${problemaInstance?.media*.id}" class="many-to-many" noSelection="['':'-Nenhuma Media selecionada-']"/>
 
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: noticiaInstance, field: 'titulo', 'error')} required">
 	<label for="titulo">
@@ -16,18 +24,13 @@
 		<g:message code="noticia.descricao.label" default="Descricao" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textArea name="descricao" cols="40" rows="5" required="" value="${noticiaInstance?.descricao}"/>
-
+	<g:textArea name="descricao"/>
+        <script>
+            CKEDITOR.replace( 'descricao' );
+        </script>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: noticiaInstance, field: 'imagem', 'error')} ">
-	<label for="imagem">
-		<g:message code="noticia.imagem.label" default="Imagem" />
-		
-	</label>
-	<g:select name="imagem" from="${portaldebairros.util.Media.list()}" multiple="multiple" optionKey="id" size="5" value="${noticiaInstance?.imagem*.id}" class="many-to-many"/>
 
-</div>
 
 <div class="fieldcontain ${hasErrors(bean: noticiaInstance, field: 'usuario', 'error')} required">
 	<label for="usuario">

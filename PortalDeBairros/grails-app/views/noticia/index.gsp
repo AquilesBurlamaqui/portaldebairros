@@ -41,8 +41,11 @@
 						<td>${fieldValue(bean: noticiaInstance, field: "descricao")}</td>
 					
 						<td>${fieldValue(bean: noticiaInstance, field: "usuario")}</td>
-                                                
-                                                <td><img src="${createLink(action:'displayImagem', id:noticiaInstance?.id)}" width="380" height="265"/></td>
+                                                 <td>
+                                                    <g:each in="${noticiaInstance.imagem}" var="m">
+                                                        <img width="150px" height="150px" title= "${m?.encodeAsHTML()}" class="Media" src="${createLink(controller:'media', action:'viewImage', id:"${m.id}")}" />
+                                                    </g:each>
+                                                </td>
 					
 					</tr>
 				</g:each>

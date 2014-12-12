@@ -51,6 +51,30 @@
 					
 				</li>
 				</g:if>
+                                
+                                <g:if test="${noticiaInstance?.imagem}">
+                                     <li class="fieldcontain">
+                                        <span id="media-label" class="property-label">
+                                            <g:message code="problema.media.label" default="Media" />
+                                        </span>
+                                        <g:each in="${noticiaInstance.imagem}" var="m">
+                                            <span class="property-value" aria-labelledby="media-label">
+                                                <g:link  style="margin-left: 10px;" controller="media" action="show" id="${m.id}">
+                                                     ${m?.encodeAsHTML()}   
+                                                </g:link>&nbsp;&nbsp;
+                                                <g:link controller="media" action="download" id="${m.id}">
+                                                    <g:img dir="images" file="downIco.png" width="15" height="15" title="download"/>
+                                                </g:link>
+                                            </span>                                                
+                                        </g:each> <br/>
+                                        <div style="margin-left:14%; margin-right:14%;">
+                                            <g:each in="${noticiaInstance.imagem}" var="m">
+                                                <img width="150px" height="150px" title= "${m?.encodeAsHTML()}" class="Media" src="${createLink(controller:'media', action:'viewImage', id:"${m.id}")}" />
+                                            </g:each>
+                                        </div>
+
+                                    </li>
+				</g:if>
 			
 				<g:if test="${noticiaInstance?.usuario}">
 				<li class="fieldcontain">
