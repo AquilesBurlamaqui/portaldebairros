@@ -85,13 +85,13 @@
                            
                             <!--<asset:image src="image-7.jpg"/>-->
                            
-                            <img width="150px" height="150px" title= "${listaNews.imagem[0]?.encodeAsHTML()}" class="Media" src="${createLink(controller:'media', action:'viewImage', id:"${listaNews.imagem[0].id}")}" />
+                            <img width="780px" height="150px" title= "${listaNews.imagem[0]?.encodeAsHTML()}" class="Media" src="${createLink(controller:'media', action:'viewImage', id:"${listaNews.imagem[0].id}")}" />
                             
                           
                             <div class="filmgrain"></div>    
                             <div class="carousel-caption">
                                 <h3>${listaNews}</h3>
-                                <p class="by-line">By Arthur Daley</p>
+                                <p class="by-line">${listaNews.usuario}</p>
                                 <p>${listaNews.descricao}</p>
                             </div>
                         </div>
